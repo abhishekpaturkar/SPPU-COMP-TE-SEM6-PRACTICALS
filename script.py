@@ -13,7 +13,6 @@ install('pandas')
 install('matplotlib')
 install('seaborn')
 install('nltk')
-# install('')
 install('scikit-learn')
 install('IPython')
 

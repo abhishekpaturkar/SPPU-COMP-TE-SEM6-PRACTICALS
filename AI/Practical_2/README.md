@@ -49,24 +49,24 @@ The Graph class represents the graph using an adjacency list. It contains the nu
 
 ## Example Run
 
-Enter the size of the graph: 5
-Enter the size of input: 7
-Enter edges of graph
-Enter 1 edges and weight of that edges: 0 1 4
-Enter 2 edges and weight of that edges: 0 2 2
-Enter 3 edges and weight of that edges: 1 2 1
-Enter 4 edges and weight of that edges: 1 3 5
-Enter 5 edges and weight of that edges: 2 3 8
-Enter 6 edges and weight of that edges: 2 4 10
-Enter 7 edges and weight of that edges: 3 4 1
-Enter heuristic of the edges of graph
-Enter 1 edges heuristic value: 7
-Enter 2 edges heuristic value: 6
-Enter 3 edges heuristic value: 2
-Enter 4 edges heuristic value: 1
-Enter 5 edges heuristic value: 0
-Enter the starting and the ending vertex where you want to find the shortest distance: 0 4
-The Shortest Path: 0 2 1 3 4  
-Shortest path from 0 to 4 has cost of: 14
+- Enter the size of the graph: 5
+- Enter the size of input: 7
+- Enter edges of graph
+- Enter 1 edges and weight of that edges: 0 1 4
+- Enter 2 edges and weight of that edges: 0 2 2
+- Enter 3 edges and weight of that edges: 1 2 1
+- Enter 4 edges and weight of that edges: 1 3 5
+- Enter 5 edges and weight of that edges: 2 3 8
+- Enter 6 edges and weight of that edges: 2 4 10
+- Enter 7 edges and weight of that edges: 3 4 1
+- Enter heuristic of the edges of graph
+- Enter 1 edges heuristic value: 7
+- Enter 2 edges heuristic value: 6
+- Enter 3 edges heuristic value: 2
+- Enter 4 edges heuristic value: 1
+- Enter 5 edges heuristic value: 0
+- Enter the starting and the ending vertex where you want to find the shortest distance: 0 4
+- The Shortest Path: 0 2 1 3 4
+- Shortest path from 0 to 4 has cost of: 14
 
-This implements the A\* algorithm and finds the shortest path from node 0 to 4.
+- This implements the A\* algorithm and finds the shortest path from node 0 to 4.

@@ -1,5 +1,3 @@
-# readme.md
-
 # Practical 1 - Graph Traversal Algorithms (DFS & BFS)
 
 This code implements depth first search (DFS) and breadth first search (BFS) algorithms to traverse a graph data structure.

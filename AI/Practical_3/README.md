@@ -56,46 +56,46 @@ Implements Dijkstra's algorithm to find shortest path.
 
 ## Sample Inputs
 
-Enter number of elements: 5
-Enter element 1: 2
-Enter element 2: 5
-Enter element 3: 1
-Enter element 4: 0
-Enter element 5: 10
-Selection Sort:
-Unsorted array: [2, 5, 1, 0, 10]
-Sorted array: [0, 1, 2, 5, 10]  
-Enter number of jobs: 3
-Enter job name, deadline and profit separated by spaces: a 2 100
-Enter job name, deadline and profit separated by spaces: b 1 50
-Enter job name, deadline and profit separated by spaces: c 3 150
+- Enter number of elements: 5
+- Enter element 1: 2
+- Enter element 2: 5
+- Enter element 3: 1
+- Enter element 4: 0
+- Enter element 5: 10
+- Selection Sort:
+- Unsorted array: [2, 5, 1, 0, 10]
+- Sorted array: [0, 1, 2, 5, 10]
+- Enter number of jobs: 3
+- Enter job name, deadline and profit separated by spaces: a 2 100
+- Enter job name, deadline and profit separated by spaces: b 1 50
+- Enter job name, deadline and profit separated by spaces: c 3 150
 
-Job Scheduling Problem:
-Following is maximum profit sequence of jobs: [['b', 1], ['a', 2], ['c', 3]]
-None
-Enter number of vertices: 5
-Enter row 1: 0 4 0 0 0
-Enter row 2: 4 0 5 0 3
-Enter row 3: 0 5 0 1 6
-Enter row 4: 0 0 1 0 0
-Enter row 5: 0 3 6 0 0
+- Job Scheduling Problem:
+- Following is maximum profit sequence of jobs: [['b', 1], ['a', 2], ['c', 3]]
+- None
+- Enter number of vertices: 5
+- Enter row 1: 0 4 0 0 0
+- Enter row 2: 4 0 5 0 3
+- Enter row 3: 0 5 0 1 6
+- Enter row 4: 0 0 1 0 0
+- Enter row 5: 0 3 6 0 0
 
-Prim’s Minimum Spanning Tree:
-Edge Weight
-0 -- 1 == 4
-1 -- 2 == 5
-2 -- 3 == 1
-1 -- 4 == 3
-Minimum cost = 13
+- Prim’s Minimum Spanning Tree:
+- Edge Weight
+- 0 -- 1 == 4
+- 1 -- 2 == 5
+- 2 -- 3 == 1
+- 1 -- 4 == 3
+- Minimum cost = 13
 
-Kruskal’s Minimum Spanning Tree:
-Edge Weight
-2 -- 3 == 1
-1 -- 4 == 3
-0 -- 1 == 4
-1 -- 2 == 5
-Minimum cost = 13
+- Kruskal’s Minimum Spanning Tree:
+- Edge Weight
+- 2 -- 3 == 1
+- 1 -- 4 == 3
+- 0 -- 1 == 4
+- 1 -- 2 == 5
+- Minimum cost = 13
 
-Dijkstra Single-Source Shortest Path:
-Path: [0, 1, 4]
-Minimum Cost: 7
+- Dijkstra Single-Source Shortest Path:
+- Path: [0, 1, 4]
+- Minimum Cost: 7

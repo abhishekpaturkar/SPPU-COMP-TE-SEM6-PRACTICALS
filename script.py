@@ -15,7 +15,8 @@ install('seaborn')
 install('nltk')
 install('scikit-learn')
 install('IPython')
-
+install('jupyterlab')
+install('jupyter')
 
 
 # nltk extensions

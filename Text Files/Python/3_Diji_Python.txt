@@ -1,0 +1,88 @@
+class DijkstraMST:
+    def __init__(self, graph, numVertices):
+        self.numVertices = numVertices
+        self.graph = graph
+        self.dist = [float('inf')] * numVertices
+        self.visited = [False] * numVertices
+
+    def dijkstra(self, startVertex):
+        for i in range(self.numVertices):
+            self.dist[i] = float('inf')
+            self.visited[i] = False
+
+        self.dist[startVertex] = 0
+        for _ in range(self.numVertices - 1):
+            u = self.minDistance(self.dist, self.visited)
+            self.visited[u] = True
+            for v in range(self.numVertices):
+                if not self.visited[v] and self.graph[u][v] != 0 and self.dist[u] != float('inf') \
+                        and self.dist[u] + self.graph[u][v] < self.dist[v]:
+                    self.dist[v] = self.dist[u] + self.graph[u][v]
+
+        self.printMST(startVertex)
+
+    def minDistance(self, dist, visited):
+        minDist = float('inf')
+        minIndex = -1
+        for i in range(self.numVertices):
+            if not visited[i] and dist[i] <= minDist:
+                minDist = dist[i]
+                minIndex = i
+        return minIndex
+
+    def printMST(self, startVertex):
+        print("Vertex \t Distance from Source")
+        for i in range(self.numVertices):
+            print(f"{i} \t {self.dist[i]}")
+
+
+if __name__ == "__main__":
+    n = int(input("Enter the size of the graph: "))
+    graph = []
+    for i in range(n):
+        row = []
+        for j in range(n):
+            weight = int(input(f"Enter the weight {i} -> {j} of the graph: "))
+            row.append(weight)
+        graph.append(row)
+
+    startVertex = int(input("Enter the starting vertex of the graph: "))
+    dijkstra = DijkstraMST(graph, n)
+    dijkstra.dijkstra(startVertex)
+
+
+# /*
+# Enter the  size of the graph: 5
+# Enter the weight 0-> 0 of the graph: 0
+# Enter the weight 0-> 1 of the graph: 2
+# Enter the weight 0-> 2 of the graph: 0
+# Enter the weight 0-> 3 of the graph: 6 
+# Enter the weight 0-> 4 of the graph: 0
+# Enter the weight 1-> 0 of the graph: 2
+# Enter the weight 1-> 1 of the graph: 0
+# Enter the weight 1-> 2 of the graph: 3
+# Enter the weight 1-> 3 of the graph: 8
+# Enter the weight 1-> 4 of the graph: 5
+# Enter the weight 2-> 0 of the graph: 0
+# Enter the weight 2-> 1 of the graph: 3
+# Enter the weight 2-> 2 of the graph: 0
+# Enter the weight 2-> 3 of the graph: 0
+# Enter the weight 2-> 4 of the graph: 7
+# Enter the weight 3-> 0 of the graph: 6
+# Enter the weight 3-> 1 of the graph: 8
+# Enter the weight 3-> 2 of the graph: 0
+# Enter the weight 3-> 3 of the graph: 0
+# Enter the weight 3-> 4 of the graph: 9
+# Enter the weight 4-> 0 of the graph: 0
+# Enter the weight 4-> 1 of the graph: 5
+# Enter the weight 4-> 2 of the graph: 7
+# Enter the weight 4-> 3 of the graph: 9
+# Enter the weight 4-> 4 of the graph: 0
+# Enter the starting vertex of the graph: 1
+# Vertex   Distance from Source
+# 0       2
+# 1       0
+# 2       3
+# 3       8
+# 4       5 
+# */

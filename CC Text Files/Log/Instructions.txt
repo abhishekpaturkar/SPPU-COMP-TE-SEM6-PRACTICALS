@@ -1,0 +1,17 @@
+mkdir logfile_analysis
+	
+cd logfile_analysis/
+
+gedit Driver.java
+gedit log_input.txt
+
+hdfs dfs -mkdir /log_analysis/
+hdfs dfs -put log_input.txt  /log_analysis/
+
+javac -cp $(hadoop classpath) *.java
+	
+jar -cvf log.jar *.class 
+
+hadoop jar log.jar Driver /log_analysis/log_input.txt /logfile_analysis/Output
+
+hadoop fs -cat /logfile_analysis/Output/part-r-00000

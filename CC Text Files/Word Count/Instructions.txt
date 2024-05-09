@@ -1,0 +1,20 @@
+$ hadoop fs -rm -r  /word_count
+$ mkdir wordcount_class 
+$ cd wordcount_class/
+$ gedit SumReducer.java
+$ gedit WordMapper.java 
+$ gedit WordCount.java
+$ gedit UN.txt
+
+$ hdfs dfsadmin -safemode leave
+$ hdfs dfs -mkdir /word_count/
+$ hdfs dfs -put UN.txt  /word_count/
+
+$ javac -cp $(hadoop classpath) *.java
+$ jar -cvf wordcount.jar *.class 
+$ hadoop jar wordcount.jar WordCount /word_count/UN.txt /word_count/Output
+$ hadoop fs -cat /word_count/Output/part-r-00000
+
+
+
+
